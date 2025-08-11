@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API key configuration</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      label {
+        font-size: 18px;
+      }
+      input {
+        font-size: 20px;
+        padding: 10px;
+      }
+      p {
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 25px;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AI Summary Settings</h1>
+    <div class="cont">
+      <label for="apikey">Gemini API Key:</label>
+      <input type="text" id="apikey" placeholder="Enter your api key" />
+      <h4>Not have any gemini Api key 😢</h4>
+      <h3>Don't Worry! 😎</h3>
+      <p>
+        You can get an API key from
+        <a href="http://makersuite.google.com/app/apikey" target="_blank"
+          >Google AI Studio</a
+        >
+      </p>
+    </div>
+
+    <button id="savebtn">Save API</button>
+    <p id="successmsg">
+    </p>
+    <script src="option.js"></script>
+  </body>
+</html>

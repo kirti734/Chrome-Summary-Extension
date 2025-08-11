@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Webpage Summariser</title>
+   <link rel="stylesheet" href="pop.css" />
+  
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">🔍 Webpage Summariser</div>
+
+    <div class="topcontrol">
+      <select id="selectbtn">
+          <option value="summary-type">Summary Type</option>
+          <option value="brief">Brief</option>
+          <option value="bullet">Bullet</option>
+          <option value="detailed">Detailed</option>
+        </select>
+
+      <select id="langbtn">
+        <option value="english">English</option>
+          <option value="hindi">Hindi</option>
+          <option value="hineng">Layman</option>
+      </select>
+
+      <button id="askto">💬 Ask To</button>
+    </div>
+    
+    <textarea class="summary-box" type="text" id="result" rows="10" cols="67" placeholder="Pick a summary type, choose a language (like English 😊), then click “Summarise Page” for webpage text.
+Want to use your own text? Just paste it here and click “Ask To”.
+” .
+ "></textarea>
+
+    <div class="buttons">
+      <button id="summarisebtn">✂️ Summarise Page</button>
+      <button id="copybtn">📝 Copy</button>
+      <button id="clearbtn">🧹 Clear</button>
+    </div>
+  </div>
+<script src="pop.js"></script>
+</body>
+</html>
+
+
