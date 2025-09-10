@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
           "API key is not found 😢.Please set your API key in the extension options";
         return;
       } else {
-        console.log(input.value)
         await summarisepagetext(selectedtype, input.value, result.geminikey, lang, input);
       }
     });
@@ -140,8 +139,8 @@ async function gemini(type, article, key, lang) {
       break;
   }
 
-  const apiurl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${key}`;
-
+  // google gemini key of 2.0 flash model
+  const apiurl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent'
   const requestdata = {
     contents: [
       {
@@ -162,6 +161,7 @@ async function gemini(type, article, key, lang) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        'X-goog-api-key': key,
       },
       body: JSON.stringify(requestdata),
     });
@@ -182,3 +182,5 @@ async function gemini(type, article, key, lang) {
     return null;
   }
 }
+
+
